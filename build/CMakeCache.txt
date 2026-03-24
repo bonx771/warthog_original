@@ -605,6 +605,9 @@ GTest_DIR:PATH=GTest_DIR-NOTFOUND
 // Undefined, Thread, Leak, 'Address;Undefined', CFI
 GZ_SANITIZER:STRING=
 
+//Path to a library.
+GeographicLib_LIBRARIES:FILEPATH=/usr/lib/aarch64-linux-gnu/libGeographic.so
+
 //Compile with a sanitizer. Options are: Address, Memory, MemoryWithOrigins,
 // Undefined, Thread, Leak, 'Address;Undefined', CFI
 IGN_SANITIZER:STRING=
@@ -1216,6 +1219,12 @@ base_local_planner_LIB_DEPENDS:STATIC=general;costmap_2d;general;layers;general;
 //Value Computed by CMake
 base_local_planner_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/navigation/base_local_planner
 
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/noetic/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/noetic/share/bondcpp/cmake
+
 //The directory containing a CMake configuration file for boost_atomic.
 boost_atomic_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/boost_atomic-1.71.0
 
@@ -1312,6 +1321,15 @@ dwa_local_planner_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/navigation/
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
 
+//The directory containing a CMake configuration file for eigen_conversions.
+eigen_conversions_DIR:PATH=/opt/ros/noetic/share/eigen_conversions/cmake
+
+//Dependencies for the target
+ekf_LIB_DEPENDS:STATIC=general;filter_base;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Dependencies for the target
+ekf_localization_nodelet_LIB_DEPENDS:STATIC=general;ros_filter;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
 //Value Computed by CMake
 explore_lite_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/m-explore/explore
 
@@ -1323,6 +1341,12 @@ fake_localization_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/navigatio
 
 //Value Computed by CMake
 fake_localization_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/navigation/fake_localization
+
+//Dependencies for the target
+filter_base_LIB_DEPENDS:STATIC=general;filter_utilities;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Dependencies for the target
+filter_utilities_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
 
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/gazebo
@@ -1353,6 +1377,9 @@ gennodejs_DIR:PATH=/opt/ros/noetic/share/gennodejs/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/noetic/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geographic_msgs.
+geographic_msgs_DIR:PATH=/opt/ros/noetic/share/geographic_msgs/cmake
 
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
@@ -1458,7 +1485,7 @@ map_server_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/navigation/map_s
 map_server_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/navigation/map_server
 
 //Dependencies for the target
-map_server_image_loader_LIB_DEPENDS:STATIC=general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;/usr/lib/aarch64-linux-gnu/libBulletDynamics.so;general;/usr/lib/aarch64-linux-gnu/libBulletCollision.so;general;/usr/lib/aarch64-linux-gnu/libLinearMath.so;general;/usr/lib/aarch64-linux-gnu/libBulletSoftBody.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/aarch64-linux-gnu/libSDLmain.a;general;/usr/lib/aarch64-linux-gnu/libSDL.so;general;-lpthread;general;/usr/lib/aarch64-linux-gnu/libSDL_image.so;
+map_server_image_loader_LIB_DEPENDS:STATIC=general;/usr/lib/aarch64-linux-gnu/libBulletDynamics.so;general;/usr/lib/aarch64-linux-gnu/libBulletCollision.so;general;/usr/lib/aarch64-linux-gnu/libLinearMath.so;general;/usr/lib/aarch64-linux-gnu/libBulletSoftBody.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/aarch64-linux-gnu/libSDLmain.a;general;/usr/lib/aarch64-linux-gnu/libSDL.so;general;-lpthread;general;/usr/lib/aarch64-linux-gnu/libSDL_image.so;
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
@@ -1526,6 +1553,15 @@ navigation_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/navigation/navig
 //Value Computed by CMake
 navigation_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/navigation/navigation
 
+//Dependencies for the target
+navsat_transform_LIB_DEPENDS:STATIC=general;filter_utilities;general;ros_filter_utilities;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/aarch64-linux-gnu/libGeographic.so;
+
+//Dependencies for the target
+navsat_transform_nodelet_LIB_DEPENDS:STATIC=general;navsat_transform;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/aarch64-linux-gnu/libGeographic.so;
+
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
+
 //The directory containing a CMake configuration file for octomap.
 octomap_DIR:PATH=/usr/lib/aarch64-linux-gnu/octomap
 
@@ -1584,6 +1620,9 @@ pkgcfg_lib_UUID_uuid:FILEPATH=/usr/lib/aarch64-linux-gnu/libuuid.so
 pkgcfg_lib_YAMLCPP_yaml-cpp:FILEPATH=/usr/lib/aarch64-linux-gnu/libyaml-cpp.so
 
 //Path to a library.
+pkgcfg_lib_YAML_CPP_yaml-cpp:FILEPATH=/usr/lib/aarch64-linux-gnu/libyaml-cpp.so
+
+//Path to a library.
 pkgcfg_lib_YAML_yaml:FILEPATH=/usr/lib/aarch64-linux-gnu/libyaml.so
 
 //Path to a library.
@@ -1603,6 +1642,24 @@ rf2o_laser_odometry_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libtf.so;gene
 
 //Value Computed by CMake
 rf2o_laser_odometry_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/rf2o_laser_odometry
+
+//Value Computed by CMake
+robot_localization_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/robot_localization
+
+//Value Computed by CMake
+robot_localization_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/robot_localization
+
+//Dependencies for the target
+robot_localization_estimator_LIB_DEPENDS:STATIC=general;filter_utilities;general;filter_base;general;ekf;general;ukf;
+
+//Dependencies for the target
+ros_filter_LIB_DEPENDS:STATIC=general;ekf;general;ukf;general;ros_filter_utilities;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Dependencies for the target
+ros_filter_utilities_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Dependencies for the target
+ros_robot_localization_listener_LIB_DEPENDS:STATIC=general;robot_localization_estimator;general;ros_filter_utilities;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;yaml-cpp;
 
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/noetic/share/rosbag/cmake
@@ -1633,6 +1690,9 @@ roslaunch_DIR:PATH=/opt/ros/noetic/share/roslaunch/cmake
 
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
+
+//The directory containing a CMake configuration file for roslint.
+roslint_DIR:PATH=/opt/ros/noetic/share/roslint/cmake
 
 //The directory containing a CMake configuration file for roslz4.
 roslz4_DIR:PATH=/opt/ros/noetic/share/roslz4/cmake
@@ -1666,6 +1726,9 @@ sdformat9_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/sdformat9
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
+
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/noetic/share/smclib/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
@@ -1702,6 +1765,15 @@ trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
 
 //Dependencies for the target
 trajectory_planner_ros_LIB_DEPENDS:STATIC=general;base_local_planner;
+
+//Dependencies for the target
+ukf_LIB_DEPENDS:STATIC=general;filter_base;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Dependencies for the target
+ukf_localization_nodelet_LIB_DEPENDS:STATIC=general;ros_filter;general;/opt/ros/noetic/lib/libdiagnostic_updater.so;general;/opt/ros/noetic/lib/libeigen_conversions.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/usr/lib/liborocos-kdl.so;general;/usr/lib/liborocos-kdl.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;
+
+//The directory containing a CMake configuration file for uuid_msgs.
+uuid_msgs_DIR:PATH=/opt/ros/noetic/share/uuid_msgs/cmake
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
@@ -1803,19 +1875,13 @@ warthog_simulation_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/warthog_
 warthog_simulation_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/warthog_navigation/warthog_simulation
 
 //Value Computed by CMake
-warthog_simulator_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/warthog_simulator/warthog_simulator
-
-//Value Computed by CMake
-warthog_simulator_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/warthog_simulator/warthog_simulator
-
-//Value Computed by CMake
 warthog_slam_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/warthog_navigation/warthog_slam
 
 //Value Computed by CMake
 warthog_slam_SOURCE_DIR:STATIC=/home/cuong/warthog_original/src/warthog_navigation/warthog_slam
 
 //Dependencies for the target
-warthog_suspension_plugin_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libgazebo_ros_api_plugin.so;general;/opt/ros/noetic/lib/libgazebo_ros_paths_plugin.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/libtf.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;SimTKcommon;general;SimTKmath;general;SimTKsimbody;general;dart;general;dart;general;dart;general;dart;general;dart;general;dart;general;/usr/lib/aarch64-linux-gnu/libgazebo.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_client.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_gui.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_physics.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_ode.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_transport.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_util.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_common.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_opende_ou.so;general;Boost::thread;general;Boost::system;general;Boost::filesystem;general;Boost::program_options;general;Boost::regex;general;Boost::iostreams;general;Boost::date_time;general;/usr/lib/aarch64-linux-gnu/libprotobuf.so;general;-lpthread;general;sdformat9::sdformat9;optimized;/usr/lib/aarch64-linux-gnu/libOgreMain.so;debug;/usr/lib/aarch64-linux-gnu/libOgreMain.so;general;Boost::thread;general;Boost::date_time;optimized;/usr/lib/aarch64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/aarch64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/aarch64-linux-gnu/libOgrePaging.so;debug;/usr/lib/aarch64-linux-gnu/libOgrePaging.so;general;ignition-common3::ignition-common3-graphics;general;Boost::thread;general;Boost::date_time;
+warthog_suspension_plugin_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libgazebo_ros_api_plugin.so;general;/opt/ros/noetic/lib/libgazebo_ros_paths_plugin.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/libtf.so;general;/opt/ros/noetic/lib/libtf2_ros.so;general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libmessage_filters.so;general;/opt/ros/noetic/lib/libtf2.so;general;/opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;SimTKcommon;general;SimTKmath;general;SimTKsimbody;general;dart;general;/usr/lib/aarch64-linux-gnu/libgazebo.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_client.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_gui.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_physics.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_ode.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_transport.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_util.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_common.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/aarch64-linux-gnu/libgazebo_opende_ou.so;general;Boost::thread;general;Boost::system;general;Boost::filesystem;general;Boost::program_options;general;Boost::regex;general;Boost::iostreams;general;Boost::date_time;general;/usr/lib/aarch64-linux-gnu/libprotobuf.so;general;-lpthread;general;sdformat9::sdformat9;optimized;/usr/lib/aarch64-linux-gnu/libOgreMain.so;debug;/usr/lib/aarch64-linux-gnu/libOgreMain.so;general;Boost::thread;general;Boost::date_time;optimized;/usr/lib/aarch64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/aarch64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/aarch64-linux-gnu/libOgrePaging.so;debug;/usr/lib/aarch64-linux-gnu/libOgrePaging.so;general;ignition-common3::ignition-common3-graphics;general;Boost::thread;general;Boost::date_time;
 
 //Value Computed by CMake
 warthog_ur_bringup_BINARY_DIR:STATIC=/home/cuong/warthog_original/build/warthog_manipulation/warthog_ur_bringup
@@ -2058,7 +2124,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=43
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=44
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -2210,7 +2276,7 @@ CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 DART_DEFINITIONS:INTERNAL=
 DART_INCLUDE_DIRS:INTERNAL=/usr/include
-DART_LIBRARIES:INTERNAL=dart;dart;dart;dart;dart;dart
+DART_LIBRARIES:INTERNAL=dart
 //Boost min version requirement
 DART_MIN_BOOST_VERSION:INTERNAL=1.58.0
 DART_dart_DEFINITIONS:INTERNAL=
@@ -2231,11 +2297,13 @@ FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-11.4][/usr/local/cud
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libcurl.so][/usr/include/aarch64-linux-gnu][c ][v7.68.0()]
 //Details about finding DART
-FIND_PACKAGE_MESSAGE_DETAILS_DART:INTERNAL=[/usr/include][dart;dart;dart;dart;dart;dart][cfound components: dart ][v(6.6)]
+FIND_PACKAGE_MESSAGE_DETAILS_DART:INTERNAL=[/usr/include][dart][cfound components: dart ][v(6.6)]
 //Details about finding DL
 FIND_PACKAGE_MESSAGE_DETAILS_DL:INTERNAL=[true][v()]
 //Details about finding FLTK
 FIND_PACKAGE_MESSAGE_DETAILS_FLTK:INTERNAL=[fltk_gl;/usr/lib/aarch64-linux-gnu/libGL.so;fltk][/usr/lib/fltk;/usr/include][v()]
+//Details about finding GeographicLib
+FIND_PACKAGE_MESSAGE_DETAILS_GeographicLib:INTERNAL=[/usr/lib/aarch64-linux-gnu][/usr/lib/aarch64-linux-gnu/libGeographic.so][/usr/include][v()]
 //Details about finding JSONCPP
 FIND_PACKAGE_MESSAGE_DETAILS_JSONCPP:INTERNAL=[TRUE][v()]
 //Details about finding OpenCV
@@ -2314,6 +2382,8 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GeographicLib_LIBRARIES
+GeographicLib_LIBRARIES-ADVANCED:INTERNAL=1
 //Have symbol drand48
 HAVE_DRAND48:INTERNAL=1
 //Have include sys/time.h
@@ -3011,6 +3081,41 @@ YAMLCPP_yaml-cpp_VERSION:INTERNAL=
 YAML_CFLAGS:INTERNAL=
 YAML_CFLAGS_I:INTERNAL=
 YAML_CFLAGS_OTHER:INTERNAL=
+YAML_CPP_CFLAGS:INTERNAL=
+YAML_CPP_CFLAGS_I:INTERNAL=
+YAML_CPP_CFLAGS_OTHER:INTERNAL=
+YAML_CPP_FOUND:INTERNAL=1
+YAML_CPP_INCLUDEDIR:INTERNAL=/usr/include
+YAML_CPP_INCLUDE_DIRS:INTERNAL=
+YAML_CPP_LDFLAGS:INTERNAL=-L/usr//usr/lib/aarch64-linux-gnu;-lyaml-cpp
+YAML_CPP_LDFLAGS_OTHER:INTERNAL=
+YAML_CPP_LIBDIR:INTERNAL=/usr//usr/lib/aarch64-linux-gnu
+YAML_CPP_LIBRARIES:INTERNAL=yaml-cpp
+YAML_CPP_LIBRARY_DIRS:INTERNAL=/usr//usr/lib/aarch64-linux-gnu
+YAML_CPP_LIBS:INTERNAL=
+YAML_CPP_LIBS_L:INTERNAL=
+YAML_CPP_LIBS_OTHER:INTERNAL=
+YAML_CPP_LIBS_PATHS:INTERNAL=
+YAML_CPP_MODULE_NAME:INTERNAL=yaml-cpp
+YAML_CPP_PREFIX:INTERNAL=/usr
+YAML_CPP_STATIC_CFLAGS:INTERNAL=
+YAML_CPP_STATIC_CFLAGS_I:INTERNAL=
+YAML_CPP_STATIC_CFLAGS_OTHER:INTERNAL=
+YAML_CPP_STATIC_INCLUDE_DIRS:INTERNAL=
+YAML_CPP_STATIC_LDFLAGS:INTERNAL=-L/usr//usr/lib/aarch64-linux-gnu;-lyaml-cpp
+YAML_CPP_STATIC_LDFLAGS_OTHER:INTERNAL=
+YAML_CPP_STATIC_LIBDIR:INTERNAL=
+YAML_CPP_STATIC_LIBRARIES:INTERNAL=yaml-cpp
+YAML_CPP_STATIC_LIBRARY_DIRS:INTERNAL=/usr//usr/lib/aarch64-linux-gnu
+YAML_CPP_STATIC_LIBS:INTERNAL=
+YAML_CPP_STATIC_LIBS_L:INTERNAL=
+YAML_CPP_STATIC_LIBS_OTHER:INTERNAL=
+YAML_CPP_STATIC_LIBS_PATHS:INTERNAL=
+YAML_CPP_VERSION:INTERNAL=0.6.2
+YAML_CPP_yaml-cpp_INCLUDEDIR:INTERNAL=
+YAML_CPP_yaml-cpp_LIBDIR:INTERNAL=
+YAML_CPP_yaml-cpp_PREFIX:INTERNAL=
+YAML_CPP_yaml-cpp_VERSION:INTERNAL=
 YAML_INCLUDEDIR:INTERNAL=/usr/include
 YAML_LDFLAGS:INTERNAL=-lyaml
 YAML_LDFLAGS_OTHER:INTERNAL=
@@ -3128,6 +3233,7 @@ __pkg_config_arguments_TINYXML2:INTERNAL=tinyxml2
 __pkg_config_arguments_UUID:INTERNAL=uuid
 __pkg_config_arguments_YAML:INTERNAL=yaml-0.1
 __pkg_config_arguments_YAMLCPP:INTERNAL=yaml-cpp;QUIET
+__pkg_config_arguments_YAML_CPP:INTERNAL=yaml-cpp
 __pkg_config_arguments_ZIP:INTERNAL=libzip
 __pkg_config_arguments_ZeroMQ:INTERNAL=libzmq >= 4
 __pkg_config_checked_BULLET:INTERNAL=1
@@ -3142,6 +3248,7 @@ __pkg_config_checked_TINYXML2:INTERNAL=1
 __pkg_config_checked_UUID:INTERNAL=1
 __pkg_config_checked_YAML:INTERNAL=1
 __pkg_config_checked_YAMLCPP:INTERNAL=1
+__pkg_config_checked_YAML_CPP:INTERNAL=1
 __pkg_config_checked_ZIP:INTERNAL=1
 __pkg_config_checked_ZeroMQ:INTERNAL=1
 //ADVANCED property for variable: boost_atomic_DIR
@@ -3208,6 +3315,8 @@ pkgcfg_lib_TINYXML2_tinyxml2-ADVANCED:INTERNAL=1
 pkgcfg_lib_UUID_uuid-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_YAMLCPP_yaml-cpp
 pkgcfg_lib_YAMLCPP_yaml-cpp-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_YAML_CPP_yaml-cpp
+pkgcfg_lib_YAML_CPP_yaml-cpp-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_YAML_yaml
 pkgcfg_lib_YAML_yaml-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_ZIP_zip
